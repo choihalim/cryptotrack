@@ -7,15 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7C669451275C770C00D7908F /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C669450275C770C00D7908F /* AboutViewController.swift */; };
 		7CBF5085275040C7004B9D86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBF5084275040C7004B9D86 /* AppDelegate.swift */; };
 		7CBF5087275040C7004B9D86 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBF5086275040C7004B9D86 /* SceneDelegate.swift */; };
 		7CBF5089275040C7004B9D86 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBF5088275040C7004B9D86 /* ViewController.swift */; };
 		7CBF508C275040C7004B9D86 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CBF508A275040C7004B9D86 /* Main.storyboard */; };
 		7CBF508E275040CB004B9D86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7CBF508D275040CB004B9D86 /* Assets.xcassets */; };
 		7CBF5091275040CB004B9D86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CBF508F275040CB004B9D86 /* LaunchScreen.storyboard */; };
+		7CBF509B275044CD004B9D86 /* Coins.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBF509A275044CD004B9D86 /* Coins.swift */; };
+		7CBF509D275044D8004B9D86 /* Coin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBF509C275044D8004B9D86 /* Coin.swift */; };
+		7CBF509F2750522F004B9D86 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBF509E2750522F004B9D86 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7C669450275C770C00D7908F /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		7CBF5081275040C7004B9D86 /* CryptoTrack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptoTrack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CBF5084275040C7004B9D86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7CBF5086275040C7004B9D86 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +29,9 @@
 		7CBF508D275040CB004B9D86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7CBF5090275040CB004B9D86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7CBF5092275040CB004B9D86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7CBF509A275044CD004B9D86 /* Coins.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coins.swift; sourceTree = "<group>"; };
+		7CBF509C275044D8004B9D86 /* Coin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coin.swift; sourceTree = "<group>"; };
+		7CBF509E2750522F004B9D86 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +66,11 @@
 			children = (
 				7CBF5084275040C7004B9D86 /* AppDelegate.swift */,
 				7CBF5086275040C7004B9D86 /* SceneDelegate.swift */,
+				7CBF509C275044D8004B9D86 /* Coin.swift */,
+				7CBF509A275044CD004B9D86 /* Coins.swift */,
 				7CBF5088275040C7004B9D86 /* ViewController.swift */,
+				7CBF509E2750522F004B9D86 /* DetailViewController.swift */,
+				7C669450275C770C00D7908F /* AboutViewController.swift */,
 				7CBF508A275040C7004B9D86 /* Main.storyboard */,
 				7CBF508D275040CB004B9D86 /* Assets.xcassets */,
 				7CBF508F275040CB004B9D86 /* LaunchScreen.storyboard */,
@@ -140,6 +152,10 @@
 			files = (
 				7CBF5089275040C7004B9D86 /* ViewController.swift in Sources */,
 				7CBF5085275040C7004B9D86 /* AppDelegate.swift in Sources */,
+				7CBF509B275044CD004B9D86 /* Coins.swift in Sources */,
+				7C669451275C770C00D7908F /* AboutViewController.swift in Sources */,
+				7CBF509F2750522F004B9D86 /* DetailViewController.swift in Sources */,
+				7CBF509D275044D8004B9D86 /* Coin.swift in Sources */,
 				7CBF5087275040C7004B9D86 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

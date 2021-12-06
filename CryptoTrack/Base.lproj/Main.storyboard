@@ -1,24 +1,345 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bF8-Dt-JTI">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--About View Controller-->
+        <scene sceneID="8ZV-X7-wGK">
+            <objects>
+                <viewController id="M0s-YZ-8iM" customClass="AboutViewController" customModule="CryptoTrack" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4ct-Y4-G3K">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hIW-ET-aaC">
+                                <rect key="frame" x="0.0" y="774" width="414" height="49"/>
+                                <items>
+                                    <barButtonItem title="Done" id="wcA-jf-WTh">
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <action selector="doneButtonPressed:" destination="M0s-YZ-8iM" id="G3t-Ye-7OZ"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                                <color key="barTintColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </toolbar>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bitcoinsign.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Tid-ay-Ryl">
+                                <rect key="frame" x="20" y="205" width="186" height="201"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CryptoTrack" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bx8-49-1Ff">
+                                <rect key="frame" x="20" y="65" width="374" height="64"/>
+                                <fontDescription key="fontDescription" name="GeezaPro-Bold" family="Geeza Pro" pointSize="52"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Track the Movement of the Top 100 Cryptocurrencies" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="58d-Kw-QG5">
+                                <rect key="frame" x="0.0" y="520" width="414" height="59"/>
+                                <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="radiowaves.right" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="x9A-5d-rey">
+                                <rect key="frame" x="153" y="244.5" width="171" height="120"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="DyA-EK-HEg"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Bx8-49-1Ff" firstAttribute="top" secondItem="DyA-EK-HEg" secondAttribute="top" constant="65" id="8MB-BS-wwp"/>
+                            <constraint firstItem="hIW-ET-aaC" firstAttribute="leading" secondItem="DyA-EK-HEg" secondAttribute="leading" id="AM5-MA-aOo"/>
+                            <constraint firstItem="58d-Kw-QG5" firstAttribute="trailing" secondItem="DyA-EK-HEg" secondAttribute="trailing" id="Net-S3-OFt"/>
+                            <constraint firstAttribute="bottom" secondItem="hIW-ET-aaC" secondAttribute="bottom" constant="19" id="QkZ-uM-iAk"/>
+                            <constraint firstItem="DyA-EK-HEg" firstAttribute="trailing" secondItem="Bx8-49-1Ff" secondAttribute="trailing" constant="20" id="RG5-4c-MKj"/>
+                            <constraint firstItem="Bx8-49-1Ff" firstAttribute="leading" secondItem="DyA-EK-HEg" secondAttribute="leading" constant="20" id="XGR-Uo-Bsl"/>
+                            <constraint firstItem="hIW-ET-aaC" firstAttribute="trailing" secondItem="DyA-EK-HEg" secondAttribute="trailing" id="Y8o-rA-QtP"/>
+                            <constraint firstItem="hIW-ET-aaC" firstAttribute="top" secondItem="58d-Kw-QG5" secondAttribute="bottom" constant="195" id="kzw-Bm-OA5"/>
+                            <constraint firstItem="58d-Kw-QG5" firstAttribute="leading" secondItem="DyA-EK-HEg" secondAttribute="leading" id="yv5-MM-2uz"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zBw-KA-rPy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1879.7101449275365" y="-636.16071428571422"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CryptoTrack" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="MUF-np-F2G">
+                                <rect key="frame" x="16" y="815" width="382" height="32"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <segments>
+                                    <segment title="Price"/>
+                                    <segment title="MarketCap"/>
+                                    <segment title="24hr Change"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentedControlValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="Gtl-2u-0UJ"/>
+                                </connections>
+                            </segmentedControl>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="lzy-jj-H2D">
+                                <rect key="frame" x="0.0" y="88" width="414" height="716"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="tM6-K6-Gve" detailTextLabel="1x9-Pp-a9F" style="IBUITableViewCellStyleValue1" id="JeY-IW-Z02">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="JeY-IW-Z02" id="qLc-Rv-3Q4">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="tM6-K6-Gve">
+                                                    <rect key="frame" x="20" y="12" width="30" height="20"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="16"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1x9-Pp-a9F">
+                                                    <rect key="frame" x="353.5" y="13" width="40.5" height="17"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="JzV-Mo-Ytr" kind="show" identifier="ShowDetail" id="KWj-Xo-bBb"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                        <constraints>
+                            <constraint firstItem="lzy-jj-H2D" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="5LB-2k-364"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="MUF-np-F2G" secondAttribute="trailing" constant="16" id="NC9-g4-lWZ"/>
+                            <constraint firstItem="MUF-np-F2G" firstAttribute="top" secondItem="lzy-jj-H2D" secondAttribute="bottom" constant="11" id="Ppb-xQ-sqW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="MUF-np-F2G" secondAttribute="bottom" constant="16" id="REQ-HM-5Lv"/>
+                            <constraint firstItem="lzy-jj-H2D" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="SkL-jr-gCW"/>
+                            <constraint firstItem="MUF-np-F2G" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="gRI-pe-YGb"/>
+                            <constraint firstItem="lzy-jj-H2D" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="rF4-jY-6Dc"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="zjW-5a-5eK">
+                        <barButtonItem key="leftBarButtonItem" title="About" id="fbV-EY-LK3">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <segue destination="M0s-YZ-8iM" kind="presentation" id="hYR-vP-hQa"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="segmentedControl" destination="MUF-np-F2G" id="mFR-Ld-XBc"/>
+                        <outlet property="tableView" destination="lzy-jj-H2D" id="tEq-4d-UWQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="984.375" y="49.647887323943664"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="N0Q-NF-Ugq">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="JzV-Mo-Ytr" customClass="DetailViewController" customModule="CryptoTrack" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="06S-JW-6GX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="254" text="Price:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="enF-ab-zrj">
+                                <rect key="frame" x="16" y="220" width="56" height="25"/>
+                                <fontDescription key="fontDescription" name="GeezaPro-Bold" family="Geeza Pro" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="255" text="-99.99%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f4v-se-odT">
+                                <rect key="frame" x="16" y="123" width="382" height="30"/>
+                                <fontDescription key="fontDescription" name="GeezaPro-Bold" family="Geeza Pro" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Volume (24hr):" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="axZ-o4-QKB">
+                                <rect key="frame" x="16" y="481" width="382" height="25"/>
+                                <fontDescription key="fontDescription" name="GeezaPro-Bold" family="Geeza Pro" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" text="Market Cap:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="beI-we-Sjz">
+                                <rect key="frame" x="16" y="274" width="382" height="25"/>
+                                <fontDescription key="fontDescription" name="GeezaPro-Bold" family="Geeza Pro" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="rank goes here" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hxg-pS-UzE">
+                                <rect key="frame" x="78" y="169" width="320" height="25"/>
+                                <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="price goes here" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="egF-dr-K41">
+                                <rect key="frame" x="78" y="220" width="320" height="25"/>
+                                <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="market cap goes here" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vBu-1G-r1L">
+                                <rect key="frame" x="16" y="307" width="382" height="25"/>
+                                <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="254" text="volume goes here" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JEe-qf-nLt">
+                                <rect key="frame" x="16" y="514" width="382" height="25"/>
+                                <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Rank:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DoK-9G-5qP">
+                                <rect key="frame" x="16" y="169" width="56" height="25"/>
+                                <fontDescription key="fontDescription" name="GeezaPro-Bold" family="Geeza Pro" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" text="Coin Name/Symbol" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F8Y-yA-2kb">
+                                <rect key="frame" x="16" y="88" width="382" height="29.5"/>
+                                <fontDescription key="fontDescription" name="GeezaPro-Bold" family="Geeza Pro" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Circulating Supply:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GWT-w5-KSP">
+                                <rect key="frame" x="16" y="591" width="382" height="25"/>
+                                <fontDescription key="fontDescription" name="GeezaPro-Bold" family="Geeza Pro" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Max Supply:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5oS-Ur-pmD">
+                                <rect key="frame" x="16" y="677" width="382" height="25"/>
+                                <fontDescription key="fontDescription" name="GeezaPro-Bold" family="Geeza Pro" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" text="supply goes here" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gmk-HV-1R1">
+                                <rect key="frame" x="16" y="624" width="382" height="25"/>
+                                <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="255" text="max supply goes here" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="noA-nQ-c39">
+                                <rect key="frame" x="16" y="710" width="382" height="25"/>
+                                <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="dfG-4P-vjQ"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="enF-ab-zrj" firstAttribute="leading" secondItem="dfG-4P-vjQ" secondAttribute="leading" constant="16" id="0YQ-Vj-1QM"/>
+                            <constraint firstItem="dfG-4P-vjQ" firstAttribute="trailing" secondItem="vBu-1G-r1L" secondAttribute="trailing" constant="16" id="0kf-hW-iGd"/>
+                            <constraint firstItem="egF-dr-K41" firstAttribute="leading" secondItem="enF-ab-zrj" secondAttribute="trailing" constant="6" id="49j-VC-1BT"/>
+                            <constraint firstItem="f4v-se-odT" firstAttribute="leading" secondItem="dfG-4P-vjQ" secondAttribute="leading" constant="16" id="6C5-A0-0QN"/>
+                            <constraint firstItem="JEe-qf-nLt" firstAttribute="leading" secondItem="dfG-4P-vjQ" secondAttribute="leading" constant="16" id="80f-FG-sFa"/>
+                            <constraint firstItem="gmk-HV-1R1" firstAttribute="top" secondItem="GWT-w5-KSP" secondAttribute="bottom" constant="8" symbolic="YES" id="8dE-xc-A5M"/>
+                            <constraint firstItem="GWT-w5-KSP" firstAttribute="leading" secondItem="dfG-4P-vjQ" secondAttribute="leading" constant="16" id="Ggf-yt-TEp"/>
+                            <constraint firstItem="noA-nQ-c39" firstAttribute="top" secondItem="5oS-Ur-pmD" secondAttribute="bottom" constant="8" symbolic="YES" id="HXO-s8-99p"/>
+                            <constraint firstItem="JEe-qf-nLt" firstAttribute="top" secondItem="axZ-o4-QKB" secondAttribute="bottom" constant="8" symbolic="YES" id="ILC-io-f40"/>
+                            <constraint firstItem="egF-dr-K41" firstAttribute="top" secondItem="Hxg-pS-UzE" secondAttribute="bottom" constant="26" id="ITQ-9T-NXM"/>
+                            <constraint firstItem="F8Y-yA-2kb" firstAttribute="leading" secondItem="dfG-4P-vjQ" secondAttribute="leading" constant="16" id="Il0-Z8-iaw"/>
+                            <constraint firstItem="dfG-4P-vjQ" firstAttribute="trailing" secondItem="F8Y-yA-2kb" secondAttribute="trailing" constant="16" id="K9Z-e6-yKi"/>
+                            <constraint firstItem="gmk-HV-1R1" firstAttribute="leading" secondItem="dfG-4P-vjQ" secondAttribute="leading" constant="16" id="Kh7-Pw-z2W"/>
+                            <constraint firstItem="dfG-4P-vjQ" firstAttribute="trailing" secondItem="JEe-qf-nLt" secondAttribute="trailing" constant="16" id="LJw-6T-4QV"/>
+                            <constraint firstItem="dfG-4P-vjQ" firstAttribute="trailing" secondItem="egF-dr-K41" secondAttribute="trailing" constant="16" id="LV4-z6-6I7"/>
+                            <constraint firstItem="f4v-se-odT" firstAttribute="top" secondItem="F8Y-yA-2kb" secondAttribute="bottom" constant="5.5" id="Lbi-OW-ZHu"/>
+                            <constraint firstItem="dfG-4P-vjQ" firstAttribute="trailing" secondItem="GWT-w5-KSP" secondAttribute="trailing" constant="16" id="Pqi-4M-bG7"/>
+                            <constraint firstItem="dfG-4P-vjQ" firstAttribute="trailing" secondItem="noA-nQ-c39" secondAttribute="trailing" constant="16" id="Pwm-RN-tlf"/>
+                            <constraint firstItem="dfG-4P-vjQ" firstAttribute="trailing" secondItem="Hxg-pS-UzE" secondAttribute="trailing" constant="16" id="R4W-pG-T9V"/>
+                            <constraint firstItem="enF-ab-zrj" firstAttribute="top" secondItem="DoK-9G-5qP" secondAttribute="bottom" constant="26" id="RJq-nG-imZ"/>
+                            <constraint firstItem="vBu-1G-r1L" firstAttribute="top" secondItem="beI-we-Sjz" secondAttribute="bottom" constant="8" symbolic="YES" id="URq-T5-SZH"/>
+                            <constraint firstItem="dfG-4P-vjQ" firstAttribute="trailing" secondItem="axZ-o4-QKB" secondAttribute="trailing" constant="16" id="Uca-p8-J4a"/>
+                            <constraint firstItem="DoK-9G-5qP" firstAttribute="top" secondItem="f4v-se-odT" secondAttribute="bottom" constant="16" id="WNt-KL-gU5"/>
+                            <constraint firstItem="5oS-Ur-pmD" firstAttribute="leading" secondItem="dfG-4P-vjQ" secondAttribute="leading" constant="16" id="XW1-ZE-KwI"/>
+                            <constraint firstItem="5oS-Ur-pmD" firstAttribute="top" secondItem="gmk-HV-1R1" secondAttribute="bottom" constant="28" id="YmA-FJ-be7"/>
+                            <constraint firstItem="Hxg-pS-UzE" firstAttribute="leading" secondItem="DoK-9G-5qP" secondAttribute="trailing" constant="6" id="Ynk-4f-Bd7"/>
+                            <constraint firstItem="vBu-1G-r1L" firstAttribute="leading" secondItem="dfG-4P-vjQ" secondAttribute="leading" constant="16" id="bCb-cS-YEn"/>
+                            <constraint firstItem="beI-we-Sjz" firstAttribute="leading" secondItem="dfG-4P-vjQ" secondAttribute="leading" constant="16" id="bhS-r9-3y0"/>
+                            <constraint firstItem="dfG-4P-vjQ" firstAttribute="trailing" secondItem="beI-we-Sjz" secondAttribute="trailing" constant="16" id="c3L-gX-DMB"/>
+                            <constraint firstItem="Hxg-pS-UzE" firstAttribute="top" secondItem="f4v-se-odT" secondAttribute="bottom" constant="16" id="gJr-x0-imm"/>
+                            <constraint firstItem="DoK-9G-5qP" firstAttribute="leading" secondItem="dfG-4P-vjQ" secondAttribute="leading" constant="16" id="gXS-Oq-zxQ"/>
+                            <constraint firstItem="dfG-4P-vjQ" firstAttribute="trailing" secondItem="5oS-Ur-pmD" secondAttribute="trailing" constant="16" id="gfK-6j-sCI"/>
+                            <constraint firstItem="dfG-4P-vjQ" firstAttribute="trailing" secondItem="f4v-se-odT" secondAttribute="trailing" constant="16" id="h9r-x8-JfK"/>
+                            <constraint firstItem="dfG-4P-vjQ" firstAttribute="trailing" secondItem="gmk-HV-1R1" secondAttribute="trailing" constant="16" id="hXc-S2-U4X"/>
+                            <constraint firstItem="beI-we-Sjz" firstAttribute="top" secondItem="enF-ab-zrj" secondAttribute="bottom" constant="29" id="lmX-B3-TCu"/>
+                            <constraint firstItem="Hxg-pS-UzE" firstAttribute="leading" secondItem="DoK-9G-5qP" secondAttribute="trailing" constant="6" id="m4k-hb-Vnc"/>
+                            <constraint firstItem="egF-dr-K41" firstAttribute="leading" secondItem="enF-ab-zrj" secondAttribute="trailing" constant="6" id="nQY-mZ-dH8"/>
+                            <constraint firstItem="F8Y-yA-2kb" firstAttribute="top" secondItem="dfG-4P-vjQ" secondAttribute="top" id="qoA-q2-YDb"/>
+                            <constraint firstItem="dfG-4P-vjQ" firstAttribute="bottom" secondItem="noA-nQ-c39" secondAttribute="bottom" constant="78" id="qtA-Ov-2qv"/>
+                            <constraint firstItem="axZ-o4-QKB" firstAttribute="leading" secondItem="dfG-4P-vjQ" secondAttribute="leading" constant="16" id="tfm-Gh-bjB"/>
+                            <constraint firstItem="GWT-w5-KSP" firstAttribute="top" secondItem="JEe-qf-nLt" secondAttribute="bottom" constant="52" id="tom-3O-V5x"/>
+                            <constraint firstItem="noA-nQ-c39" firstAttribute="leading" secondItem="dfG-4P-vjQ" secondAttribute="leading" constant="16" id="yHQ-j2-rFQ"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="MjP-cn-eQZ"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="marketCapLabel" destination="vBu-1G-r1L" id="X9L-rL-ZZJ"/>
+                        <outlet property="maxSupplyLabel" destination="noA-nQ-c39" id="by9-Sg-XuO"/>
+                        <outlet property="nameLabel" destination="F8Y-yA-2kb" id="Mha-Ot-k5Y"/>
+                        <outlet property="percentLabel" destination="f4v-se-odT" id="9mX-ww-KSm"/>
+                        <outlet property="priceLabel" destination="egF-dr-K41" id="wMe-hz-85I"/>
+                        <outlet property="rankLabel" destination="Hxg-pS-UzE" id="Uvd-Yn-KqW"/>
+                        <outlet property="supplyLabel" destination="gmk-HV-1R1" id="qWW-gm-idy"/>
+                        <outlet property="volumeLabel" destination="JEe-qf-nLt" id="mKz-3z-eVM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bt8-eZ-7lP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1882.5" y="49.647887323943664"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="or5-bx-tgd">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bF8-Dt-JTI" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="cc5-Mx-6Tn">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="rI8-54-rbF"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LQy-kM-wJ3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-13.125" y="49.647887323943664"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="bitcoinsign.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="radiowaves.right" catalog="system" width="83" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
